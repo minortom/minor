@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Toeristische kaart Nederland | Data</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Kaart">
+
+    <!-- iPhone -->
+    <link href="img/touch/apple-touch-icon-57x57-precomposed.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="img/startup/startup.png"
+          media="(device-width: 320px) and (device-height: 480px)
+                    and (-webkit-device-pixel-ratio: 1)"
+          rel="apple-touch-startup-image">
+
+    <!-- iPhone (Retina) -->
+    <link href="img/touch/apple-touch-icon-114x114-precomposed.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="img/startup/startup-retina.png"
+          media="(device-width: 320px) and (device-height: 480px)
+                    and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image">
+
+    <!-- iPhone (Retina) iOS 7 -->
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon-120x120-precomposed.png" sizes="120x120">
+
+    <!-- iPhone 5 -->
+    <link href="img/startup/startup-retina-4in.png"
+          media="(device-width: 320px) and (device-height: 568px)
+                    and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image">
+
+    <!-- iPad -->
+    <link href="img/touch/apple-touch-icon-72x72-precomposed.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="img/startup/startup-tablet-portrait.png"
+          media="(device-width: 768px) and (device-height: 1024px)
+                    and (orientation: portrait)
+                    and (-webkit-device-pixel-ratio: 1)"
+          rel="apple-touch-startup-image">
+    <link href="img/startup/startup-tablet-landscape.png"
+          media="(device-width: 768px) and (device-height: 1024px)
+                    and (orientation: landscape)
+                    and (-webkit-device-pixel-ratio: 1)"
+          rel="apple-touch-startup-image">
+
+    <!-- iPad iOS 7 -->
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon-76x76-precomposed.png" sizes="76x76">
+
+    <!-- iPad (Retina) -->
+    <link href="img/touch/apple-touch-icon-144x144-precomposed.png"
+          sizes="144x144"
+          rel="apple-touch-icon">
+    <link href="img/startup/startup-tablet-portrait-retina.png"
+          media="(device-width: 768px) and (device-height: 1024px)
+                    and (orientation: portrait)
+                    and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image">
+    <link href="img/startup/startup-tablet-landscape-retina.png"
+          media="(device-width: 768px) and (device-height: 1024px)
+                    and (orientation: landscape)
+                    and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image">
+
+    <!-- iPad (Retina) iOS 7 -->
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon-152x152-precomposed.png" sizes="152x152">
+
+
+    <!--<link rel="apple-touch-startup-image" href="img/startup/startup.png"/>-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#222222">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/custom.modernizr.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="clouds"></div>
+
+    <div class="frame weather-clouds weather-cloudy"></div>
+    <div class="frame weather-mist weather-unknown"></div>
+    <div class="frame weather-rain weather-heavyRain"></div>
+    <div class="frame weather-snow weather-storm"></div>
+    <div class="frame weather-sun weather-sunny"></div>
+    <div class="frame">
+
+        <div class="row">
+
+            <div class="large-5 columns">
+                <div class="panel">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h1>Toeristische kaart Nederland</h1>
+                            <span style="color:#c4c4c4; font-size:12px;">Gebruik de <kbd>&#8592;</kbd> & <kbd>&#8594;</kbd> toetsen om te navigeren.</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+                        <div class="small-10 columns">
+                            <div class="title"></div>
+							<div class="weather-text" id="weather-description"></div>
+                        </div>
+                        <div class="small-2 columns">
+                            <div class="weather">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <div class="place"></div>
+                            <p class="text"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <div class="facts">Facts:</div>
+                            <p class="fact-text"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <a href="#" id="slide_comp">Wereldwijde vergelijking  <span>&#8605;</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="large-5 columns">
+                <div class="panel comp">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h1>Wereldwijde vergelijking:</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+                        <div class="small-10 columns">
+                            <div class="comp_title"></div>
+                        </div>
+                        <div class="small-2 columns">
+                            <div class="comp_weather">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <div class="comp_place"></div>
+                            <p class="comp_text"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <div class="facts">Facts:</div>
+                            <p class="comp_fact-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="world">
+            <div id="tree1" class="part tree"></div>
+            <div id="tree2" class="part tree"></div>
+            <div id="brug" class="part"></div>
+            <div id="diksteBoom" class="part"></div>
+            <div id="hoogsteGebouw" class="part"></div>
+            <div id="kleinsteDorp" class="part"></div>
+            <div id="laagstePlek" class="part"></div>
+            <div id="molen" class="part"></div>
+            <div id="oudsteHuis" class="part"></div>
+            <div id="scheefsteToren" class="part"></div>
+            <div id="smalsteHuis" class="part"></div>
+            <div id="stilstePlek" class="part"></div>
+
+        </div>
+    </div>
+</div>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/application.class.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
