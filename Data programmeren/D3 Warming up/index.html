@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Warming up</title>		
+		<link rel="stylesheet" href="style.css">
+		
+    </head>
+    <body>
+    <h1>					
+		<div id='container'></div>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.6.0.min.js"></script>		
+
+		<script defer>
+		
+// begin javascript code
+		    var width = 980;
+		    var height = 400;
+
+			var stage = new Kinetic.Stage({
+			  container: 'container',
+			  width: width,
+			  height: height
+			});
+
+			var layer = new Kinetic.Layer();
+
+			var points = [];
+			for (var i = 0; i < 50; i++) {
+			  points.push({
+				x: Math.random()*width/2 + width/4,
+				y: Math.random()*height/2 + height/4
+			  });
+			}
+
+			var blob = new Kinetic.Blob({
+			  points: points,
+			  stroke: '#00F',
+			  opacity: 0.5,
+			  strokeWidth: 4,
+			  lineCap: 'round',
+			  tension: 1,
+			  shadowColor: 'black',
+			  shadowBlur: 2,
+			  shadowOffset: 10,
+			  shadowOpacity: 0.5,
+			  
+			});
+		
+			
+			layer.add(blob);
+			stage.add(layer);
+			blob.tween = new Kinetic.Tween({
+				node: blob,
+				easing: Kinetic.Easings.EaseIn,
+			  	duration: 1,
+				scaleX: 0,
+          		scaleY: 0
+			});
+			blob.tween.play();
+			
+			
+        </script>
+     </h1>
+    </body>
+</html>

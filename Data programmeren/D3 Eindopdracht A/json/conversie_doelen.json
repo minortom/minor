@@ -1,0 +1,185 @@
+[
+    {
+        "Weeknummer": "1",
+        "Conversies": "10382",
+        "ConversieRatio": "8",
+		"avgconversies": "11000",
+		"avgratio": "10"
+		
+    },
+    {
+        "Weeknummer": "2",
+        "Conversies": "12588",
+        "ConversieRatio": "10",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "3",
+        "Conversies": "11238",
+        "ConversieRatio": "10",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "4",
+        "Conversies": "8394",
+        "ConversieRatio": "11",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "5",
+        "Conversies": "13033",
+        "ConversieRatio": "12",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "6",
+        "Conversies": "12837",
+        "ConversieRatio": "14",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "7",
+        "Conversies": "9242",
+        "ConversieRatio": "8",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "8",
+        "Conversies": "11212",
+        "ConversieRatio": "9",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "9",
+        "Conversies": "12324",
+        "ConversieRatio": "18",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "10",
+        "Conversies": "11852",
+        "ConversieRatio": "10",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "11",
+        "Conversies": "13148",
+        "ConversieRatio": "19",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "12",
+        "Conversies": "13145",
+        "ConversieRatio": "10",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "13",
+        "Conversies": "13263",
+        "ConversieRatio": "9",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "14",
+        "Conversies": "10098",
+        "ConversieRatio": "7",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "15",
+        "Conversies": "8175",
+        "ConversieRatio": "9",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "16",
+        "Conversies": "10951",
+        "ConversieRatio": "10",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "17",
+        "Conversies": "12773",
+        "ConversieRatio": "11",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "18",
+        "Conversies": "13456",
+        "ConversieRatio": "15",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "19",
+        "Conversies": "9705",
+        "ConversieRatio": "14",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "20",
+        "Conversies": "12316",
+        "ConversieRatio": "17",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "21",
+        "Conversies": "9642",
+        "ConversieRatio": "13",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "22",
+        "Conversies": "11403",
+        "ConversieRatio": "15",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "23",
+        "Conversies": "10508",
+        "ConversieRatio": "9",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "24",
+        "Conversies": "11274",
+        "ConversieRatio": "10",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "25",
+        "Conversies": "13562",
+        "ConversieRatio": "16",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    },
+    {
+        "Weeknummer": "26",
+        "Conversies": "8971",
+        "ConversieRatio": "8",
+		"avgconversies": "11000",
+		"avgratio": "10"
+    }
+]

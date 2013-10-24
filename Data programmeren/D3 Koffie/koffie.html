@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Koffie opdracht</title>
+<link rel="stylesheet" href="style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="container">
+    	<div id="controls">
+            <h1>Verschillen in gebruik tussen twee koffieautomaten</h1>
+            <h2>Vergelijk dranken</h2>
+            <span class="alles">Alle</span>
+            <span class="koffie">Koffie</span>
+            <span class="espresso">Espresso</span>
+            <span class="cappuccino">Cappuccino</span>
+            <span class="warme_choco">Warme choco</span>
+            <span class="warm_water">Warm water</span>
+            <span class="overig">Overig</span>
+        </div>
+        <div id="aantal_left"></div>
+        <div id="aantal_right"></div>
+        <div id="coffee">
+        	<div id="leftcoffee">
+            </div>
+            <div id="rightcoffee">
+            </div>
+        <script>
+		$( document ).ready(function() {
+	var koffieDataLeftNames = [ "Koffie", "Espresso",  "Cappuccino",  "Warme choco", "Warm water", "Overig" ];
+	var koffieDataColors = [ "#000000", "#b93000",  "#ffa800",  "#693e00",  "#b2e8ff",  "#fff" ];	
+	
+	var koffieDataLeft = [ 63, 36,  31,  9,  0,  9 ];
+	var koffieDataRight = [ 134, 88,  31,  4,  2,  20 ];
+	
+		$("span").click(function() {
+			var myClass = $(this).attr("class");
+  			 switch (true) {
+                case (myClass == "alles"):
+					$('svg').remove();
+					$("span").css( "background-color", "#666" );
+					$(this).css( "background-color", "red" );
+                    loadLeft(0, 6);
+					loadRight(0, 6);
+                    break;
+                case (myClass == "koffie"):
+					$('svg').remove();
+					$("span").css( "background-color", "#666" );
+					$(this).css( "background-color", koffieDataColors[0] );
+                    loadLeft(0, 1);
+					loadRight(0, 1);
+                    break;
+                case (myClass == "espresso"):
+					$('svg').remove();
+					$("span").css( "background-color", "#666" );
+					$(this).css( "background-color", koffieDataColors[1] );
+					loadLeft(1, 2);
+					loadRight(1, 2);
+                    break;
+				case (myClass == "cappuccino"):
+					$('svg').remove();
+					$("span").css( "background-color", "#666" );
+					$(this).css( "background-color", koffieDataColors[2] );
+					loadLeft(2, 3);
+					loadRight(2, 3);
+                    break;
+				case (myClass == "warme_choco"):
+					$('svg').remove();
+					$("span").css( "background-color", "#666" );
+					$(this).css( "background-color", koffieDataColors[3] );
+					loadLeft(3, 4);
+					loadRight(3, 4);
+                    break;
+				case (myClass == "warm_water"):
+					$('svg').remove();
+					$("span").css( "background-color", "#666" );
+					$(this).css( "background-color", koffieDataColors[4] );
+					loadLeft(4, 5);
+					loadRight(4, 5);
+                    break;
+				case (myClass == "overig"):
+					$('svg').remove();
+					$("span").css( "background-color", "#666" );
+					$(this).css( "background-color", koffieDataColors[5] );
+					loadLeft(5, 6);
+					loadRight(5, 6);
+                    break;
+                default:
+					$('svg').remove();
+					$("span").css( "background-color", "#666" );
+					$(this).css( "background-color", koffieDataColors[6] );
+                    loadLeft(6, 7);
+					loadRight(6, 7);
+            }
+		});
+		
+	
+					
+	function loadLeft(laagstegetal,hoogstegetal) {
+		
+		var koffieData = [];
+		var koffieColor = [];
+		var right = [];
+		for ( var i = laagstegetal; i < hoogstegetal; i = i + 1 ) {
+			koffieData.push(koffieDataLeft[i]);
+		}
+		for ( var i = laagstegetal; i < hoogstegetal; i = i + 1 ) {
+			right.push(koffieDataRight[i]);
+		}
+		for ( var i = laagstegetal; i < hoogstegetal; i = i + 1 ) {
+			koffieColor.push(koffieDataColors[i]);
+		}
+		var total = 0;
+		for (var i = 0; i < koffieData.length; i++) {
+    		total += koffieData[i] << 0;
+		}
+		
+		$("#aantal_left").html("Gedronken <br> kopjes<br>" + total);
+		console.log(Math.max.apply(Math, koffieData));
+		var heightScale = d3.scale.linear()
+					.domain([0, 190])
+					.range([d3.min($.merge(right, koffieData), function(d) { return d; }), d3.max($.merge(right, koffieData), function(d) { return d; })]);
+		var canvas = d3.select("#leftcoffee")
+					.append("svg")
+					.attr("width", 170)
+					.attr("height", 190);
+					
+	
+		var count = 190;
+		var bars = canvas.selectAll("rect")
+					.data(koffieData)
+					.enter().append("rect")
+					.attr("y", function(d, i) { count = count - (heightScale(d));  return count;     })
+					.style("fill", function(d, i) { return koffieColor[i]     })
+					.attr("width", 170)
+					.attr("height", function(d) { return heightScale(d); });
+					
+		
+	}
+				
+	function loadRight(laagstegetal,hoogstegetal) {
+		var koffieData = [];
+		var koffieColor = [];
+		var left = [];
+		for ( var i = laagstegetal; i < hoogstegetal; i = i + 1 ) {
+			koffieData.push(koffieDataRight[i]);
+		}
+		for ( var i = laagstegetal; i < hoogstegetal; i = i + 1 ) {
+			left.push(koffieDataLeft[i]);
+		}
+		for ( var i = laagstegetal; i < hoogstegetal; i = i + 1 ) {
+			koffieColor.push(koffieDataColors[i]);
+		}
+		var total = 0;
+		for (var i = 0; i < koffieData.length; i++) {
+    		total += koffieData[i] << 0;
+		}
+		
+		$("#aantal_right").html("Gedronken <br> kopjes<br>" + total);
+		var heightScale = d3.scale.linear()
+					.domain([0, 190])
+					.range([d3.min($.merge(left, koffieData), function(d) { return d; }), d3.max($.merge(left, koffieData), function(d) { return d; })]);
+		var canvas2 = d3.select("#rightcoffee")
+					.append("svg")
+					.attr("width", 170)		
+					.attr("height",190);	
+		var count = 190;			
+		var bars = canvas2.selectAll("rect")
+					.data(koffieData)
+					.enter().append("rect")
+					.attr("y", function(d, i) { count = count - (heightScale(d));  return count;     })
+					.style("fill", function(d, i) { return koffieColor[i]     })
+					.attr("width", 170)
+					.attr("height", function(d) { return heightScale(d); });
+	}
+					
+
+	});
+	</script>
+        </div>
+        <div id="cups">
+        </div>
+    </div>
+	
+</body>
+</html>
